@@ -1,6 +1,7 @@
 package com.taotao.service;
 
 import com.taotao.common.pojo.EUDataGridResult;
+import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.pojo.TbItem;
 
 public interface ItemService {
@@ -9,6 +10,6 @@ public interface ItemService {
 
 	EUDataGridResult getItemList(int page, int rows);
 
-	void saveItem(TbItem item, String desc, String itemParams) throws Exception;
+	TaotaoResult saveItem(TbItem item, String desc, String itemParams) throws Exception;
 
 }
