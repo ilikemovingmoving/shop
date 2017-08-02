@@ -1,4 +1,4 @@
-package com.taotao.rest.service;
+package com.taotao.rest.pojo;
 
 import java.util.List;
 

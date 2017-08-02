@@ -1,5 +1,3 @@
-
-
 package com.taotao.service.impl;
 
 import com.github.pagehelper.PageHelper;
@@ -30,7 +28,7 @@ public class ItemParamServiceImpl implements ItemParamService {
 	public EUDataGridResult getItemParamList(int page, int rows) {
 		//查询商品规格参数
 		TbItemParamExample example = new TbItemParamExample();
-		//分页处理
+		/* 分页处理 */
 		PageHelper.startPage(page, rows);
 		List<TbItemParam> list = itemParamMapper.selectByExampleWithBLOBs(example);
 		//List<TbItemParam> list = itemParamMapper.selectByExample(example);

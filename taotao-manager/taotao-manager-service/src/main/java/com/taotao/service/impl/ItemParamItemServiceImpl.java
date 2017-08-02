@@ -15,8 +15,8 @@ import java.util.Map;
 public class ItemParamItemServiceImpl implements ItemParamItemService {
 
 	@Autowired
-    private TbItemParamItemMapper itemParamItemMapper;
-	
+	private TbItemParamItemMapper itemParamItemMapper;
+
 	@Override
 	public String getItemParamByItemId(Long itemId) {
 		//根据商品id查询规格参数
