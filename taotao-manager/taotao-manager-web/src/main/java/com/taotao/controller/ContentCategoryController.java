@@ -25,8 +25,30 @@ public class ContentCategoryController {
     @ResponseBody
     public List<EUTreeNode> getContentCategoryList(@RequestParam(value="id", defaultValue="0")long parentid) throws Exception {
         List<EUTreeNode> list = contentCategoryService.getContentCategoryList(parentid);
-
         return list;
     }
+
+    @RequestMapping("/create")
+    @ResponseBody
+    public TaotaoResult addNode(Long parentId, String name) throws Exception {
+
+        TaotaoResult result = contentCategoryService.addNode(parentId, name);
+        return result;
+    }
+
+    @RequestMapping("/delete")
+    @ResponseBody
+    public int delNode(Long id) throws Exception{
+        int i = contentCategoryService.delNode(id);
+        return i;
+    }
+
+    @RequestMapping("/update")
+    @ResponseBody
+    public int rename(Long id,String name) throws Exception{
+        return contentCategoryService.rename(id,name);
+    }
+
+
 }
 

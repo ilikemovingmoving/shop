@@ -10,4 +10,11 @@ import java.util.List;
  */
 public interface ContentCategoryService {
     public List<EUTreeNode> getContentCategoryList(long parentid) throws Exception;
+
+    public TaotaoResult addNode(long parentid, String name) throws Exception;
+
+    public int rename(long id,String name) throws Exception;
+
+    public int delNode(long id) throws  Exception;
+
 }
